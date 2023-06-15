@@ -1,5 +1,8 @@
 import random
 a = int(input("enter a random number to activate the invisible magic spinner"))
+Livlist = ["4Aces", "Crushers", "Cleeks", "Fireballs", "HyFlyers", "Iron Heads", "Majesticks", "RangeGoats", "Rippers", "Smash", "Stingers", "Torque"]
+ROTYLIST = ["Yes", "No", "No", "No", "Yes"]
+years = list(range(1, 31))
 division1_golf_colleges = [
     "University of Alabama",
     "Arizona State University",
@@ -483,16 +486,68 @@ if computed == 1:
     print("You made division 1 golf")
     college = random.choice(division1_golf_colleges)
     print("Your college is: ", college)
+    how_long_d1 = random.randint(1,4)
+    print("You played for", how_long_d1, "years")
+    how_long_d1 = random.randint(1,4)
+    print("You played for", how_long_d1, "years")
+    if how_long_d1 == 4:
+        tourlist = ["Yes, you made the PGA tour", "Yes you made the LIV tour", "No, you didn't make any of the pro tours and you went straight to korn ferry Q school","No, you didn't make any of the pro tours and you went straight to korn ferry Q school","No, you didn't make any of the pro tours and you went straight to korn ferry Q school","You quit golf because you lost interest"]
+        tour = int(input("enter a number to see your destiny after college"))
+        print(random.choice(tourlist))
 if computed == 2:
     print("You made division 2 golf")
     college = random.choice(division2_golf_colleges)
     print("Your college is: ", college)
+    how_long_d2 = random.randint(1,4)
+    print("You played for", how_long_d2, "years")
+    if how_long_d2 == 4:
+        tourlist = ["Yes, you made the PGA tour", "Yes you made the LIV tour", "No, you didn't make any of the pro tours and you went straight to korn ferry Q school","No, you didn't make any of the pro tours and you went straight to korn ferry Q school","No, you didn't make any of the pro tours and you went straight to korn ferry Q school","You quit golf because you lost interest"]
+        tour = int(input("enter a number to see your destiny after college"))
+        print(random.choice(tourlist))
+         
+    Transfer2L = ["D1","No","No",]
+    Transfer2 = int(input("enter a random number to see if you got promoted to d1"))
+    randchoiceTransfer2 = random.choice(Transfer2L)
+    if randchoiceTransfer2 == "No":
+        print("You didn't get moved to d1")
+    if randchoiceTransfer2 == "D1":
+        print("You transfered to a", randchoiceTransfer2, "school")
+        print("Your new college is, ", random.choice(division1_golf_colleges))
 if computed == 3:
     print("You made division 3 golf")
     college = random.choice(division3_golf_colleges)
     print("Your college is: ", college)
+    how_long_d3 = random.randint(1,4)
+    print("You played for", how_long_d3, "years")
+    how_long_d3 = random.randint(1,4)
+    print("You played for", how_long_d3, "years")
+    if how_long_d3 == 4:
+        tourlist = ["Yes, you made the PGA tour", "Yes you made the LIV tour", "No, you didn't make any of the pro tours and you went straight to korn ferry Q school","No, you didn't make any of the pro tours and you went straight to korn ferry Q school","No, you didn't make any of the pro tours and you went straight to korn ferry Q school","You quit golf because you lost interest"]
+        tour = int(input("enter a number to see your destiny after college"))
+        print(random.choice(tourlist))
+    Transfer3L = ["D1","No","No","No","D2"]
+    Transfer3 = int(input("enter a random number to see if you got promoted to d2 or d1"))
+    randchoiceTransfer3 = random.choice(Transfer3L)
+    if randchoiceTransfer3 == "No":
+        print("You didn't get moved to d1 or d2")
+    if randchoiceTransfer3 == "D1":
+        print("You transfered to a", randchoiceTransfer3, "school")
+        print("Your new college is, ", random.choice(division1_golf_colleges))
+    if randchoiceTransfer3 == "D2":
+        print("Your transfered to a", randchoiceTransfer3, "school")
+        print("Your new college is", random.choice(division2_golf_colleges))
 elif computer == 5:
     print("you made it to LIV golf")
-
+    Chance = random.choice(Livlist)
+    print("Your golf team are", Chance)
+    Wins = [1,2,3,4,5,6]
+    print("In your rookie year you got", random.choice(Wins))
 elif computer == 10:
     print("You made it to the PGA tour")
+    Chances = random.randint(1,200)
+    print("Your rookie year ranking is", Chances)
+    pick_a_year = random.choice(years)
+    print(pick_a_year)
+    Spin = int(input("enter a number to see if you got ROTY"))
+    PGAROTY = random.choice(ROTYLIST)
+    print(PGAROTY)
